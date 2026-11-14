@@ -1,0 +1,46 @@
+# Automatic License Plate Recognition
+
+This repository contains code of our blog post Automatic License Plate Recognition. 
+
+This code takes a two step approach where License plates are first detected using [YOLOv4](https://github.com/AlexeyAB/darknet) and OCR is then applied using [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) on the detected License plates.
+
+## Requirements
+```
+pip install -r requirements.txt
+```
+## Notebooks
+This repository contains three jupyter notebooks, each one of performing different tasks.
+
+- **[ALPR_inference.ipynb](https://colab.research.google.com/github/sanyam83/learnopencv/blob/master/ALPR/ALPR_inference.ipynb)**: This notebook contains the pipeline required for end to end inference of the Automatic License plate recognition on images and videos along with the implementation of tracker. Run this notebook to perform ALPR on an image or a video.
+
+- **[License_plate_detection_YOLOv4.ipynb](https://colab.research.google.com/github/sanyam83/learnopencv/blob/master/ALPR/License_plate_detection_YOLOv4.ipynb)**: This notebook contains end to end implementation of license plate detection using YOLOv4. It includes code for training, evaluation and inference based on darknet.
+
+- **[OCR_comparison.ipynb](https://colab.research.google.com/github/sanyam83/learnopencv/blob/master/ALPR/OCR_comparison.ipynb)**: This notebook compares performances of three of the PaddleOCR algorithms. The algorithms include, pp-ocr, pp-ocr(server), SRN.
+
+## ALPR output example
+
+![ALPR output](https://user-images.githubusercontent.com/64148610/158544760-75cee7a6-8461-4aba-b6a7-06b85723bc14.gif)
+
+---
+
+<p align="center">
+  <a href="https://bigvision.ai/">
+    <img src="https://bigvision.ai/logos/logo.png" alt="BigVision.AI" width="300">
+  </a>
+</p>
+
+<h2 align="center">Build Production-Ready Computer Vision &amp; AI Solutions</h2>
+
+<p align="center">
+  LearnOpenCV is maintained by <a href="https://bigvision.ai/"><strong>BigVision.AI</strong></a>, a computer vision and AI consulting company. We help organizations design, build, optimize, and deploy production-ready AI solutions. Our team has deep expertise in computer vision, deep learning, multimodal AI, and edge deployment, with experience solving complex technical challenges across industries.
+</p>
+
+<p align="center">
+  Have a project in mind? Talk with our expert AI solution builders.
+</p>
+
+<p align="center">
+  <a href="https://bigvision.ai/expert-ai-solution-builders?utm_source=locv-github">
+    <img src="https://img.shields.io/badge/Get%20in%20Touch-087EA4?style=for-the-badge" alt="Get in Touch with BigVision.AI">
+  </a>
+</p>

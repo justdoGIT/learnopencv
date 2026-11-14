@@ -1,0 +1,8 @@
+# Requires Python 3.12.x
+numpy==1.26.4
+tensorflow==2.16.1
+matplotlib
+ipython
+opencv-python==4.11.0.86
+scikit-learn
+jupyterlab

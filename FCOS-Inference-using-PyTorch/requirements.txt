@@ -1,0 +1,7 @@
+# Requires Python 3.12.x
+matplotlib>=3.8,<3.11
+numpy>=1.26.4,<2
+opencv-python-headless>=4.10.0.84,<5
+requests>=2.32.3
+torch>=2.6,<2.9
+torchvision>=0.21,<0.24

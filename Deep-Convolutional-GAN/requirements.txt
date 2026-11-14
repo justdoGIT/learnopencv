@@ -1,0 +1,8 @@
+# Requires Python 3.12.x
+numpy==1.26.4
+tensorflow==2.16.1
+torch==2.8.0
+torchsummary==1.5.1
+torchvision==0.23.0
+matplotlib
+ipython

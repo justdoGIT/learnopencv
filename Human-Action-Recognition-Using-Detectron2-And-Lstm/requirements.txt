@@ -1,0 +1,12 @@
+-i https://pypi.org/simple
+# Requires Python 3.12.x
+Flask>=2.3.3,<3
+numpy>=1.26.4,<2
+opencv-python>=4.10.0.84,<5
+pytorch_lightning>=1.9.5,<2
+setuptools<81
+torch>=2.6,<2.9
+torchvision>=0.21,<0.24
+pyyaml>=6.0.2
+Werkzeug>=2.3.8,<3
+torchmetrics>=1.4,<2

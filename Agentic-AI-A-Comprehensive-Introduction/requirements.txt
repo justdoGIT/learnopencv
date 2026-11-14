@@ -1,0 +1,21 @@
+# Requires Python 3.12.x
+# Keep this file focused on direct dependencies used by the scripts in this
+# folder and let pip resolve transitive packages to currently patched versions.
+crewai
+crewai-tools
+duckduckgo-search
+fastapi
+groq
+langchain-google-genai
+langchain-openai
+openai
+packaging
+pgvector
+phidata
+psycopg[binary]
+pypdf
+python-dotenv
+sqlalchemy
+typer
+uvicorn
+yfinance

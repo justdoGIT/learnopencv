@@ -1,0 +1,15 @@
+# Requires Python 3.12.x
+# This directory carries helper files that plug into the upstream LLaVA-Next
+# and Video-RAG repositories. Keep only the direct pip-installable dependencies
+# used by these local scripts instead of a frozen environment dump.
+decord>=0.6.0
+easyocr>=1.7.1
+ffmpeg-python>=0.2.0
+huggingface-hub>=0.22.2
+numpy==1.26.4
+peft>=0.14.0
+Pillow==12.1.1
+torch==2.8.0
+torchaudio==2.8.0
+tqdm==4.67.1
+transformers>=4.48.0

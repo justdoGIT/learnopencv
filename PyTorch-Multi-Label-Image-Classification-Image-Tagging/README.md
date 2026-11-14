@@ -1,0 +1,87 @@
+# Multi-Label Image Classification with PyTorch: Image Tagging
+
+**This repository contains code for [Multi-Label Image Classification with PyTorch: Image Tagging](https://learnopencv.com/multi-label-image-classification-with-pytorch-image-tagging/) blog post**.
+
+[<img src="https://learnopencv.com/wp-content/uploads/2022/07/download-button-e1657285155454.png" alt="download" width="200">](https://www.dropbox.com/sh/fst5b5o43bxh4ye/AAAxEZlXuKeWG9t_Vutj6YAca?dl=1)
+
+# Setup
+Before installation create and activate virtual environment
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+Install the dependencies
+```bash
+pip install -r requirements.txt
+```
+
+# Training
+For training run [jupyter notebook](Pipeline.ipynb)
+
+# Additional instructions
+## Data preparation
+We use [the NUS-WIDE dataset](https://lms.comp.nus.edu.sg/wp-content/uploads/2019/research/nuswide/NUS-WIDE.html) for this tutorial. 
+Instead of parsing Flickr for image downloading we use [a dump](https://drive.google.com/open?id=0B7IzDz-4yH_HSmpjSTlFeUlSS00) from [this github repository](https://github.com/thuml/HashNet/tree/master/pytorch#datasets)
+Download and extract it.
+
+Also, we added pre-processed annotations:  
+```nus_wide/train.json```  
+```nus_wide/test.json``` 
+
+If you want to create them yourself, run the command:
+```bash
+python split_data_nus.py -i images
+```
+where ``` -i images``` is the path to the folder with extracted images
+
+## Subset creation
+You can train the model for the entire data set, but it takes a lot of time. For this tutorial we use part of this data.
+
+For subset creation run the command: 
+```bash
+python create_subset.py -i images
+```
+where ``` -i images``` is the path to the folder with extracted images
+
+Additional options:
+```bash
+python create_subset.py -h
+usage: Subset creation [-h] -i IMG_PATH [-v VAL_SIZE] [-t TRAIN_SIZE]
+                       [--shuffle] [-l LABELS [LABELS ...]]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i IMG_PATH, --img-path IMG_PATH
+                        Path to the "images" folder
+  -v VAL_SIZE, --val-size VAL_SIZE
+                        Size of the validation data
+  -t TRAIN_SIZE, --train-size TRAIN_SIZE
+                        Size of the train data
+  --shuffle             Shuffle samples before splitting
+  -l LABELS [LABELS ...], --labels LABELS [LABELS ...]
+                        Subset labels
+```
+
+---
+
+<p align="center">
+  <a href="https://bigvision.ai/">
+    <img src="https://bigvision.ai/logos/logo.png" alt="BigVision.AI" width="300">
+  </a>
+</p>
+
+<h2 align="center">Build Production-Ready Computer Vision &amp; AI Solutions</h2>
+
+<p align="center">
+  LearnOpenCV is maintained by <a href="https://bigvision.ai/"><strong>BigVision.AI</strong></a>, a computer vision and AI consulting company. We help organizations design, build, optimize, and deploy production-ready AI solutions. Our team has deep expertise in computer vision, deep learning, multimodal AI, and edge deployment, with experience solving complex technical challenges across industries.
+</p>
+
+<p align="center">
+  Have a project in mind? Talk with our expert AI solution builders.
+</p>
+
+<p align="center">
+  <a href="https://bigvision.ai/expert-ai-solution-builders?utm_source=locv-github">
+    <img src="https://img.shields.io/badge/Get%20in%20Touch-087EA4?style=for-the-badge" alt="Get in Touch with BigVision.AI">
+  </a>
+</p>

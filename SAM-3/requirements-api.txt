@@ -1,0 +1,4 @@
+# Hosted inference and local mask decoding only; no CUDA/PyTorch requirement.
+openai==2.21.0
+meta-sam-parser==0.0.5
+Pillow==11.3.0

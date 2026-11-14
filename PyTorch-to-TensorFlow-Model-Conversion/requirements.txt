@@ -1,0 +1,9 @@
+# Requires Python 3.12.x
+albumentations>=2.0,<3
+onnx>=1.20,<2
+onnx2keras==0.0.24
+opencv-python>=4.10.0.84,<5
+tensorflow==2.20.0
+tf-keras==2.20.1
+torch>=2.10,<2.11
+torchvision>=0.25,<0.26

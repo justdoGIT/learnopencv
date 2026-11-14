@@ -1,0 +1,31 @@
+# GraphRAG: Now Faster and Cost-Effective for Medical Document Analysis 
+
+This folder contains the Scripts for the LearnOpenCV article  - **[Fast GraphRAG for Medical Document Analysis](https://learnopencv.com/graphrag-explained-knowledge-graphs-medical/)**.
+
+<img src="readme_images/feature.gif">
+
+[<img src="https://learnopencv.com/wp-content/uploads/2022/07/download-button-e1657285155454.png" alt="Download" width="200">](https://www.dropbox.com/scl/fo/4cow6ulwx4boltiujwu1z/AGHjrg0rn6QNv0JgGWeTAeQ?rlkey=j4wmkvvtm84n0ujwe74lpp3nk&st=dvf9x36e&dl=1)
+
+---
+
+<p align="center">
+  <a href="https://bigvision.ai/">
+    <img src="https://bigvision.ai/logos/logo.png" alt="BigVision.AI" width="300">
+  </a>
+</p>
+
+<h2 align="center">Build Production-Ready Computer Vision &amp; AI Solutions</h2>
+
+<p align="center">
+  LearnOpenCV is maintained by <a href="https://bigvision.ai/"><strong>BigVision.AI</strong></a>, a computer vision and AI consulting company. We help organizations design, build, optimize, and deploy production-ready AI solutions. Our team has deep expertise in computer vision, deep learning, multimodal AI, and edge deployment, with experience solving complex technical challenges across industries.
+</p>
+
+<p align="center">
+  Have a project in mind? Talk with our expert AI solution builders.
+</p>
+
+<p align="center">
+  <a href="https://bigvision.ai/expert-ai-solution-builders?utm_source=locv-github">
+    <img src="https://img.shields.io/badge/Get%20in%20Touch-087EA4?style=for-the-badge" alt="Get in Touch with BigVision.AI">
+  </a>
+</p>

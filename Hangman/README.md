@@ -1,0 +1,75 @@
+# Hangman: Creating games in OpenCV
+
+**This repository contains the code for [Hangman: Creating games in OpenCV](https://learnopencv.com/hangman-creating-games-in-opencv/) blog post**.
+
+[<img src="https://learnopencv.com/wp-content/uploads/2022/07/download-button-e1657285155454.png" alt="download" width="200">](https://www.dropbox.com/sh/q5xa2wiv8a93aps/AADZyd3Wf11qzDMSCT03yjnPa?dl=1)
+
+## Outline
+1. Use **pandas** library to process the **IMDb database**.
+- Remove the columns which are not required. This has been done by removing the columns which are required from the list of all column headings. We are keeping **`release_year`**, **`cast`**, **`director`**, **`keywords`** and **`tagline`** as 5 features of a movie.
+- All the rows having at least one missing value are removed using `dropna` function from Pandas.
+- We only keep the rows which have english alpha numerical movie title.
+- We remove all the rows which have `,` in the movie title or any of the 5 features. This has been done to make sure that the commas are present only to separate the data across columns in CSV file.
+- We only keep movies with titles less than or equal to 20 and tagline length less than or equal to 30. 
+- Save the final database to a CSV file using `to_csv` function from Pandas.
+
+2. Read the dataset from the CSV file and store it in dictionary format: `movie_title:[year,list of keywords, tagline, director, list of cast]`- **`read_from_csv`**
+
+3. Get a random movie from the list of movies and get all the information (5 features) for that movie - **`get_movie_info`**
+
+4. From the 5 movie features, select any 3 features. If the features have list of keywords and/or list of cast, randomly select one from the list - **`select_hints`**
+
+5. Read the hangman template - **`get_canvas`**
+
+6. Get the points where each blank rectanglular box will be drawn depending on the maximum width and height among all the characters present in the movie name - **`get_char_coords`**
+
+7. Draw the blank rectangular boxes - **`draw_blank_rects`**
+
+8. While the number of incorrect attempts is less than 6 and the game hasn't been won or lost yet:
+- Take character input from user
+- If the character is invalid (not an alphabet), display `INVALID CHARACTER`
+- Else if the character has already been entered, display `ALREADY USED`
+- Else if the character is NOT present in movie title, display `WRONG`, increment number of incorrect attempts, display another body part in Hangman, and display the character in `Letters used`
+- Else, display `CORRECT`, display the letters in the blank rectangles and display the character in `Letters used`
+- If all characters in movie have been guessed, break the loop and display `YOU WON`
+- If number of incorrect attempts are equal to or more than 6, break the loop and display `YOU LOST`
+
+9. Reveal the movie name at the end of the game.
+
+10. Wait for the user to press a key and quit.
+
+**The entire game will run on full screen by default**.
+
+## Instructions
+`python main.py`
+
+## Requirements
+1. OpenCV 3.4
+2. Pandas
+3. Numpy
+
+
+
+---
+
+<p align="center">
+  <a href="https://bigvision.ai/">
+    <img src="https://bigvision.ai/logos/logo.png" alt="BigVision.AI" width="300">
+  </a>
+</p>
+
+<h2 align="center">Build Production-Ready Computer Vision &amp; AI Solutions</h2>
+
+<p align="center">
+  LearnOpenCV is maintained by <a href="https://bigvision.ai/"><strong>BigVision.AI</strong></a>, a computer vision and AI consulting company. We help organizations design, build, optimize, and deploy production-ready AI solutions. Our team has deep expertise in computer vision, deep learning, multimodal AI, and edge deployment, with experience solving complex technical challenges across industries.
+</p>
+
+<p align="center">
+  Have a project in mind? Talk with our expert AI solution builders.
+</p>
+
+<p align="center">
+  <a href="https://bigvision.ai/expert-ai-solution-builders?utm_source=locv-github">
+    <img src="https://img.shields.io/badge/Get%20in%20Touch-087EA4?style=for-the-badge" alt="Get in Touch with BigVision.AI">
+  </a>
+</p>
