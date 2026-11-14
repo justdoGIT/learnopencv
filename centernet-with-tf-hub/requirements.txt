@@ -3,4 +3,4 @@ opencv-python==4.11.0.86
 tensorflow==2.16.1
 tensorflow-hub==0.16.1
 matplotlib==3.9.2
-setuptools==80.9.0
+setuptools==84.1.0
